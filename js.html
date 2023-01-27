@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js modal sample</title>
+    <style>
+      .overlay {
+        display: none;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .modal {
+        width: 60%;
+        margin: 50px auto;
+        background: #fff;
+        padding: 20px 30px;
+        position: relative;
+        font-family: sans-serif;
+        direction: rtl;
+        text-align: right;
+        border-radius: 10px;
+      }
+      span.close {
+        left: 22px;
+        color: red;
+        cursor: pointer;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="modal">
+        <span class="close">X</span>
+        <h2>عنوان</h2>
+        <div class="contant">این متن اصلی است....</div>
+      </div>
+    </div>
+    <button class="btn">open modal</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button.btn").click(function () {
+           $(".overlay").fadeIn(500);
+        });
+        $("span.close").click(function(){
+            $(".overlay").fadeOut(500);
+        });
+      });
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js & jquery</title>
+    <style>
+      .overlay {
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        display: none;
+      }
+      .modal {
+        width: 60%;
+        background: #fff;
+        text-align: right;
+        direction: rtl;
+        margin: 50px auto;
+        padding: 20px 30px;
+        border-radius: 10px;
+      }
+      span.close {
+        left: 300px;
+        position: absolute;
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="modal">
+        <span class="close">X</span>
+        <h2>عنوان مدال</h2>
+        <div class="contant">متن داخل مدال....</div>
+      </div>
+    </div>
+    <button id="btn">open modal</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("span.close").click(function () {
+          $(".overlay").fadeOut(500);
+        });
+        $("button#btn").click(function () {
+          $(".overlay").fadeIn(500);
+        });
+        // $("body").click(function () {
+        //   if ($(".overlay").is(":visible")) {
+        //     $(".overlay").hide();
+        //   }
+        // });
+      });
+    </script>
+  </body>
+</html>
